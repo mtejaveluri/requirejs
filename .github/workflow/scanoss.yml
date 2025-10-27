@@ -1,0 +1,23 @@
+name: SCANOSS Scan
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  run-scanoss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run SCANOSS Scan
+        uses: scanoss/gha-code-scan@v1
+        with:
+          scanMode: full
+
+      - name: Upload Scan Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: scanoss-results
+          path: scanoss_output
