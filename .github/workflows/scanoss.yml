@@ -24,3 +24,4 @@ jobs:
         uses: scanoss/code-scan-action@v1
         with:
           policies: copyleft, undeclared
+          settingsFilepath: scanoss.json
