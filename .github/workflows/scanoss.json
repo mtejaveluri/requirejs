@@ -1,7 +1,0 @@
-{
-  "bom": {
-    "include": [
-      { "purl": "pkg:github/mtejaveluri/requirejs@main" }
-    ]
-  }
-}
